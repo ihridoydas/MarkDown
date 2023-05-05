@@ -94,6 +94,32 @@ All Syntax can be found [here](https://daringfireball.net/projects/markdown/synt
 These characteristics are dependent upon each markdown flavour.  
 
 
+# Package Structure
+    
+    com.vaibhav.healthify    # Root Package
+    .
+    ├── data                # For data handling.
+    |   ├── local           # Room DB and its related classes
+    |   ├── remote          # Firebase, Auth0 and their relative classes
+    │   ├── model           # Model data classes and mapper classes, both remote and local entities
+    │   └── repo            # Single source of data.
+    |
+    ├── di                  # Dependency Injection             
+    │   └── module          # DI Modules
+    |
+    ├── ui                  # UI/View layer
+    |   ├── adapters        # All Adapters, viewholder and diffUtils for recyclerViews   
+    |   ├── dialog          # All Dialog Fragments and their viewmodels      
+    │   ├── auth            # Authorization Activity and its fragments
+    │   ├── homeScreen      # Home Activity and its fragments
+    |   ├── userDetails     # User Details Activity and its fragments
+    |   ├── onBoarding      # OnboardingScreen
+    │   └── splashScreen    # SplashScreen
+    |
+    └── utils               # Utility Classes / Kotlin extensions
+
+
+
 ## Useful notes  :
  * Markdown allows you to use backslash escapes to generate literal characters which
 would otherwise have special meaning in Markdown’s formatting syntax. One commonly used backslash escape character is : \     
